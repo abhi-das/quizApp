@@ -1,0 +1,14 @@
+<ul class="quiz-list"  >
+    <li class="quiz-list__item" *ngFor="let templateType of templateId">
+
+        <!--<div *ngIf="templateType == 'single-choice'" single-choice></div>
+        <div *ngIf="templateType == 'multiple-choice'" multiple-choice></div>-->
+
+        <single-choice *ngIf="templateType == 'single-choice'"></single-choice>
+        <multiple-choice *ngIf="templateType == 'multiple-choice'"></multiple-choice>
+
+    </li>
+    <li class="quiz-list__item">
+        <button>Submit</button>
+    </li>
+</ul>

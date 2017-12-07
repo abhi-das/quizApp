@@ -1,0 +1,17 @@
+
+
+.quiz-list {
+    list-style: none;
+    margin-top: 5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 5em;
+    &__item {
+        min-height: 15em;
+        padding: 5em 2em;
+        text-align: left;
+        background-color: #e7e7e7;
+        border-radius: 1em;
+        margin-bottom: 1em;
+    }
+}
