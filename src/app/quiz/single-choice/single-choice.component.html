@@ -12,7 +12,7 @@
 
 	        <input type="radio" name="icon_solid+{{index}}" value="{{choice.value}}" 
 	        	*ngIf="qz.nextEnable == true"/>
-	        	
+
 	        <input type="radio" name="icon_solid+{{index}}" value="{{choice.value}}" 
 	        	*ngIf="qz.nextEnable == false" (click)="navTo(navigateNext)"/>
 
@@ -26,5 +26,5 @@
 </div>
 
 <p class="btn btn-sm btn-primary schoice__btn-next"
-	*ngIf="qz.nextEnable" 
+	*ngIf="qz.nextEnable && !isLastQ" 
 	[ngx-scroll-to]="navigateNext"> Next   <i class="fa fa-chevron-right"></i> </p>

@@ -82,8 +82,8 @@ export class QuizComponent implements OnInit {
         "selected": false
       }]
   	}, {
-  		headline: "Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?",
-  		type: 'multiple-choice',
+      headline: "Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?",
+      type: 'multiple-choice',
       nextEnable: true,
       choices: [{
         "label": "Mich mit Kind",
@@ -92,6 +92,23 @@ export class QuizComponent implements OnInit {
       }, {
         "label": "Mich und meinen Lebenspartner",
         "value": "Mich und meinen Lebenspartner",
+        "selected": false
+      }]
+    }, {
+  		headline: "Sunt laborum veniam aute magna do dolor ?",
+  		type: 'single-choice',
+      nextEnable: true,
+      choices: [{
+        "label": "Mich mit Kind",
+        "value": "Mich mit Kind",
+        "selected": false
+      }, {
+        "label": "Irure est cillum.",
+        "value": "Lorem ipsum officia labore.",
+        "selected": false
+      }, {
+        "label": "Sunt do fugiat ea tempor.",
+        "value": "Cillum ut.",
         "selected": false
       }]
   	}];

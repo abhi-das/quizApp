@@ -1,13 +1,20 @@
 <form role="form">
 	<ul class="quiz-list"  >
 
-	    <li class="quiz-list__item" *ngFor="let question of questions; let idx = index" id="quest{{idx}}">
+	    <li id="quest{{idx}}" class="quiz-list__item" 
+	    	*ngFor="let question of questions; let idx = index; let isLastQ = last" >
 
-	        <single-choice *ngIf="question.type == 'single-choice'" [qz]="question" [index]="(idx+1)"
-	        [navigateNext]="'#quest'+(idx+1)"></single-choice>
+	        <single-choice *ngIf="question.type == 'single-choice'" 
+	        	[qz]="question" 
+	        	[index]="(idx+1)"
+	        	[isLastQ]="isLastQ"
+	        	[navigateNext]="'#quest'+(idx+1)"></single-choice>
 
-	        <multiple-choice *ngIf="question.type == 'multiple-choice'" [qz]="question" [index]="(idx+1)"
-	        [navigateNext]="'#quest'+(idx+1)"></multiple-choice>
+	        <multiple-choice *ngIf="question.type == 'multiple-choice'" 
+	        	[qz]="question" 
+	        	[index]="(idx+1)"
+	        	[isLastQ]="isLastQ"
+	        	[navigateNext]="'#quest'+(idx+1)"></multiple-choice>
 
 	    </li>
 

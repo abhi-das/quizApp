@@ -6,7 +6,7 @@ import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scrol
   selector: 'multiple-choice',
   templateUrl: './multiple-choice.component.html',
   styleUrls: ['./multiple-choice.component.scss'],
-  inputs: ['qz','index','navigateNext']
+  inputs: ['qz','index','isLastQ','navigateNext']
 })
 export class MultipleChoiceComponent implements OnInit {
 

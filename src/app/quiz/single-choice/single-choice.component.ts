@@ -5,7 +5,7 @@ import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scrol
   selector: 'single-choice',
   templateUrl: './single-choice.component.html',
   styleUrls: ['./single-choice.component.scss'],
-  inputs: ['qz','index','navigateNext']
+  inputs: ['qz','index','isLastQ','navigateNext']
 })
 export class SingleChoiceComponent implements OnInit {
 

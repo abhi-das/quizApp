@@ -14,7 +14,7 @@
 	        	
 	        <input type="checkbox" name="choice+{{index}}" value="{{choice.value}}" 
 	        	*ngIf="qz.nextEnable == false" (click)="navTo(navigateNext)"/>
-	        	
+
 	        <div class="state p-info">
 	            <i class="icon fa fa-check"></i>
 	            <label>{{choice.label}}</label>
@@ -22,7 +22,6 @@
 	    </div>
 	</div>
 </div>
-
 <p class="btn btn-sm btn-primary mchoice__btn-next" 
-	*ngIf="qz.nextEnable" 
+	*ngIf="qz.nextEnable && !isLastQ" 
 	[ngx-scroll-to]="navigateNext"> Next   <i class="fa fa-chevron-right"></i> </p>
