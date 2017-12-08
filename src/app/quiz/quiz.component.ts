@@ -7,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuizComponent implements OnInit {
 
-  templateId: String[];
+  questions: any;
 
   constructor() { }
 
   ngOnInit() {
 
-    this.templateId = ["single-choice", "multiple-choice", "single-choice", "multiple-choice"];
+  	this.questions = [{
+  		type: 'single-choice'
+  	}, {
+  		type: 'multiple-choice'
+  	}, {
+  		type: 'single-choice'
+  	}, {
+  		type: 'multiple-choice'
+  	}];
 
   }
 

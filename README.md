@@ -30,3 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Reference 
 https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/
 https://github.com/loiane/angular-bootstrap-example
+
+##ScrollTo
+https://www.npmjs.com/package/@nicky-lenaers/ngx-scroll-to

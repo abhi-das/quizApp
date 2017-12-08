@@ -11,6 +11,8 @@ import { MultipleChoiceComponent } from './quiz/multiple-choice/multiple-choice.
 import { SingleChoiceComponent } from './quiz/single-choice/single-choice.component';
 import { WindowRef } from './services/window.service';
 
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { WindowRef } from './services/window.service';
     BrowserModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ScrollToModule.forRoot()
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
   providers: [ WindowRef ],
