@@ -14,19 +14,87 @@ export class QuizComponent implements OnInit {
   ngOnInit() {
 
   	this.questions = [{
-  		headline: "Wen möchtest Du versichern?",
-  		type: 'single-choice'
+      headline: "Wen möchtest Du versichern?",
+      type: 'single-choice',
+      nextEnable: false,
+      choices: [{
+        "label": "Meine Familie mit Kindern",
+        "value": "Meine Familie mit Kindern",
+        "selected": false
+      }, {
+        "label": "Meine Familie ohne Kinder",
+        "value": "Meine Familie ohne Kinder",
+        "selected": false
+      }, {
+        "label": "Mich ohne Kind",
+        "value": "Mich ohne Kind",
+        "selected": false
+      }, {
+        "label": "Mich mit Kind",
+        "value": "Mich mit Kind",
+        "selected": false
+      }, {
+        "label": "Mich und meinen Lebenspartner",
+        "value": "Mich und meinen Lebenspartner",
+        "selected": false
+      }]
+    }, {
+  		headline: "Lorem ipsum reprehenderit aliquip fugiat est Do sint?",
+  		type: 'single-choice',
+      nextEnable: true,
+      choices: [{
+        "label": "Meine Familie mit Kindern",
+        "value": "Meine Familie mit Kindern",
+        "selected": false
+      }, {
+        "label": "Meine Familie ohne Kinder",
+        "value": "Meine Familie ohne Kinder",
+        "selected": false
+      }, {
+        "label": "Mich ohne Kind",
+        "value": "Mich ohne Kind",
+        "selected": false
+      }]
   	}, {
   		headline: "Bist Du Beamter oder im öffentlichen Dienst angestellt?",
-  		type: 'multiple-choice'
+  		type: 'multiple-choice',
+      nextEnable: false,
+      choices: [{
+        "label": "Ja",
+        "value": "Ja",
+        "selected": false
+      }, {
+        "label": "Nein",
+        "value": "Nein",
+        "selected": false
+      }]
   	}, {
   		headline: "Möchtest Du eine Forderungsausfalldeckung absichern?",
-  		type: 'single-choice'
+  		type: 'single-choice',
+      nextEnable: true,
+      choices: [{
+        "label": "Ja",
+        "value": "Ja",
+        "selected": false
+      }, {
+        "label": "Nein",
+        "value": "Nein",
+        "selected": false
+      }]
   	}, {
   		headline: "Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?",
-  		type: 'multiple-choice'
+  		type: 'multiple-choice',
+      nextEnable: true,
+      choices: [{
+        "label": "Mich mit Kind",
+        "value": "Mich mit Kind",
+        "selected": false
+      }, {
+        "label": "Mich und meinen Lebenspartner",
+        "value": "Mich und meinen Lebenspartner",
+        "selected": false
+      }]
   	}];
-
   }
 
 }

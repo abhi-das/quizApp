@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
+
 
 @Component({
   selector: 'multiple-choice',
@@ -8,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MultipleChoiceComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _scrollToService: ScrollToService) {}
 
   ngOnInit() {
   }
 
+  public navTo(navId) {
+
+  	const config: ScrollToConfigOptions = {
+      target: navId
+    };
+ 
+    this._scrollToService.scrollTo(config);
+  }
 }

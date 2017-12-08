@@ -16,9 +16,13 @@
 	}
 	&__checkbox {
 		padding-left: 3.5em;
+		padding-top: 1em;
 	}
 	&__btn-next {
 		margin-left: 3.5em;
 		margin-top: 2em;
+	}
+	.pretty .state label {
+		margin-left: 1em;
 	}
 }

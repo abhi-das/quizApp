@@ -2,22 +2,27 @@
 <div class="mchoice form-group"> 
 	<div class="mchoice__item">
 		<p>
-			<span class="mchoice__item-count">{{index}}</span> <i class="fa fa-long-arrow-right"></i>
+			<span class="mchoice__item-count">{{index}}</span> 
+			<i class="fa fa-long-arrow-right"></i>
 		</p>
 		<p class="mchoice__label">{{qz.headline}}</p>
 	</div>
-	<div class="mchoice__checkbox checkbox">
-	  <label>
-		<input type="checkbox" name="fav_foods" value="pizza">
-		Pizza
-	  </label>
-	</div>
-	<div class="mchoice__checkbox checkbox">
-	  <label>
-		<input type="checkbox"  name="fav_foods" value="hamburger">
-		Hamburgers
-	  </label>
+	<div class="mchoice__checkbox" *ngFor='let choice of qz.choices'>
+  		<div class="pretty p-icon p-pulse">
+	        <input type="checkbox" name="choice+{{index}}" value="{{choice.value}}" 
+	        	*ngIf="qz.nextEnable == true"/>
+	        	
+	        <input type="checkbox" name="choice+{{index}}" value="{{choice.value}}" 
+	        	*ngIf="qz.nextEnable == false" (click)="navTo(navigateNext)"/>
+	        	
+	        <div class="state p-info">
+	            <i class="icon fa fa-check"></i>
+	            <label>{{choice.label}}</label>
+	        </div>
+	    </div>
 	</div>
 </div>
 
-<p class="btn btn-sm btn-primary mchoice__btn-next" [ngx-scroll-to]="navigateNext"> Next   <i class="fa fa-chevron-right"></i> </p>
+<p class="btn btn-sm btn-primary mchoice__btn-next" 
+	*ngIf="qz.nextEnable" 
+	[ngx-scroll-to]="navigateNext"> Next   <i class="fa fa-chevron-right"></i> </p>

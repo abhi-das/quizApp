@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
 
 @Component({
   selector: 'single-choice',
@@ -10,10 +10,18 @@ import { Component, OnInit } from '@angular/core';
 export class SingleChoiceComponent implements OnInit {
 
 
-  constructor() {}
+  constructor(private _scrollToService: ScrollToService) {}
 
   ngOnInit() {}
 
+  public navTo(navId) {
+
+  	const config: ScrollToConfigOptions = {
+      target: navId
+    };
+ 
+    this._scrollToService.scrollTo(config);
+  }
 
 
 }
