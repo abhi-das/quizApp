@@ -1,16 +1,20 @@
-<ul class="quiz-list"  >
+<form role="form">
+	<ul class="quiz-list"  >
 
-    <li class="quiz-list__item" *ngFor="let question of questions; let idx = index" id="quest{{idx}}">
-    
-        <single-choice *ngIf="question.type == 'single-choice'" 
-        [navigateNext]="'#quest'+(idx+1)"></single-choice>
+	    <li class="quiz-list__item" *ngFor="let question of questions; let idx = index" id="quest{{idx}}">
 
-        <multiple-choice *ngIf="question.type == 'multiple-choice'"
-        [navigateNext]="'#quest'+(idx+1)"></multiple-choice>
+	        <single-choice *ngIf="question.type == 'single-choice'" [qz]="question" [index]="(idx+1)"
+	        [navigateNext]="'#quest'+(idx+1)"></single-choice>
 
-    </li>
+	        <multiple-choice *ngIf="question.type == 'multiple-choice'" [qz]="question" [index]="(idx+1)"
+	        [navigateNext]="'#quest'+(idx+1)"></multiple-choice>
 
-    <li class="quiz-list__item" id="destination">
-        <button>Submit</button>
-    </li>
-</ul>
+	    </li>
+
+	    <li class="quiz-list__item">
+	        <div class="form-group">
+				<button class="btn btn-primary " name="submit" type="submit">Submit</button>
+			</div>
+	    </li>
+	</ul>
+</form>

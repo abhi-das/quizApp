@@ -1,4 +1,31 @@
-<p>Hit the spacebar to generate color schemes! Click on a color to lock it and get wonderful color combinations. Click on the hex value to type in your starting colors. Adjust the colors HSB, RGB, CMYK, Pantone® and Copic® components.</p>
-<p>Hit the spacebar to generate color schemes! Click on a color to lock it and get wonderful color combinations. Click on the hex value to type in your starting colors. Adjust the colors HSB, RGB, CMYK, Pantone® and Copic® components.</p>
-<!-- <button class="btn btn-sm btn-primary" [ngx-scroll-to]="navigateNext"> Next </button> -->
-<button class="btn btn-sm btn-primary" (click)="navTo(navigateNext)"> Next </button>
+
+<div class="schoice form-group"> 
+	<div class="schoice__item">
+		<p>
+			<span class="schoice__item-count">{{index}}</span> <i class="fa fa-long-arrow-right"></i>
+		</p>
+		<p class="schoice__label">{{qz.headline}}</p>
+	</div>
+	<div class="schoice__checkbox">
+  		<div class="pretty p-icon p-pulse">
+	        <input type="checkbox" />
+	        <div class="state p-success">
+	            <i class="icon glyphicon glyphicon-ok"></i>
+	            <label>option 1</label>
+	        </div>
+	    </div>
+	</div>
+	<div class="schoice__checkbox">
+  		<div class="pretty p-icon p-pulse">
+	        <input type="checkbox" />
+	        <div class="state p-success">
+	            <i class="icon fa fa-check"></i>
+	            <label>option 2</label>
+	        </div>
+	    </div>
+	</div>
+
+	
+</div>
+
+<p class="btn btn-sm btn-primary schoice__btn-next" [ngx-scroll-to]="navigateNext"> Next   <i class="fa fa-chevron-right"></i> </p>

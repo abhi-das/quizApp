@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'multiple-choice',
   templateUrl: './multiple-choice.component.html',
   styleUrls: ['./multiple-choice.component.scss'],
-  inputs: ['navigateNext']
+  inputs: ['qz','index','navigateNext']
 })
 export class MultipleChoiceComponent implements OnInit {
 

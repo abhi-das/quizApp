@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
 
-$base-color: #9DC4A5;
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.css';
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+
+
+$base-color: #ebd7fa;
 
 body {
     background-color: $base-color;
+    font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }

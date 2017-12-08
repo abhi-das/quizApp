@@ -1,0 +1,24 @@
+.mchoice {
+	&__label {
+	    font-weight: 700;
+	    font-size: 1.3em;
+	    display: inline-block;
+	    margin-left: 1em;
+	    color: #5e6960;
+	}
+	&__item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		&-count {
+			font-size: 1.3em;
+		}
+	}
+	&__checkbox {
+		padding-left: 3.5em;
+	}
+	&__btn-next {
+		margin-left: 3.5em;
+		margin-top: 2em;
+	}
+}

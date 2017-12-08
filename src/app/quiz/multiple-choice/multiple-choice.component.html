@@ -1,6 +1,23 @@
-<p>Hit the spacebar to generate color schemes! Click on a color to lock it and get wonderful color combinations. Click on the hex value to type in your starting colors. Adjust the colors HSB, RGB, CMYK, Pantone® and Copic® components.</p>
-<p>Hit the spacebar to generate color schemes! Click on a color to lock it and get wonderful color combinations. Click on the hex value to type in your starting colors. Adjust the colors HSB, RGB, CMYK, Pantone® and Copic® components.</p>
-<p>Hit the spacebar to generate color schemes! Click on a color to lock it and get wonderful color combinations. Click on the hex value to type in your starting colors. Adjust the colors HSB, RGB, CMYK, Pantone® and Copic® components.</p>
-<p>Hit the spacebar to generate color schemes! Click on a color to lock it and get wonderful color combinations. Click on the hex value to type in your starting colors. Adjust the colors HSB, RGB, CMYK, Pantone® and Copic® components.</p>
-<p>Hit the spacebar to generate color schemes! Click on a color to lock it and get wonderful color combinations. Click on the hex value to type in your starting colors. Adjust the colors HSB, RGB, CMYK, Pantone® and Copic® components.</p>
-<button class="btn btn-sm btn-primary" [ngx-scroll-to]="navigateNext"> Next </button>
+
+<div class="mchoice form-group"> 
+	<div class="mchoice__item">
+		<p>
+			<span class="mchoice__item-count">{{index}}</span> <i class="fa fa-long-arrow-right"></i>
+		</p>
+		<p class="mchoice__label">{{qz.headline}}</p>
+	</div>
+	<div class="mchoice__checkbox checkbox">
+	  <label>
+		<input type="checkbox" name="fav_foods" value="pizza">
+		Pizza
+	  </label>
+	</div>
+	<div class="mchoice__checkbox checkbox">
+	  <label>
+		<input type="checkbox"  name="fav_foods" value="hamburger">
+		Hamburgers
+	  </label>
+	</div>
+</div>
+
+<p class="btn btn-sm btn-primary mchoice__btn-next" [ngx-scroll-to]="navigateNext"> Next   <i class="fa fa-chevron-right"></i> </p>
