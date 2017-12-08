@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { MultipleChoiceComponent } from './quiz/multiple-choice/multiple-choice.component';
 import { SingleChoiceComponent } from './quiz/single-choice/single-choice.component';
-
+import { WindowRef } from './services/window.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { SingleChoiceComponent } from './quiz/single-choice/single-choice.compon
     ModalModule.forRoot()
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
-  providers: [],
+  providers: [ WindowRef ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
