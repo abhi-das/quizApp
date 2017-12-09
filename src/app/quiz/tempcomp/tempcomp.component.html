@@ -1,6 +1,7 @@
 <div class="pretty p-icon p-round p-pulse" [formGroup]="headerSectionFormGroup">
 
-    <input id="ttm" type="radio" name="ttm" value="America" formControlName="ttm"/>
+    <input id="iamnew" type="radio" name="iamnew" value="America" 
+    	(click)="updateExisting('iamnew')"/>
 
     <div class="state p-info">
         <i class="icon fa fa-check"></i>

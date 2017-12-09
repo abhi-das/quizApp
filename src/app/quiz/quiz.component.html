@@ -2,8 +2,8 @@
 	[formGroup] = 'form'
 	(ngSubmit)='onFeedbackSubmit(form.value)'
 	>
-	
-	<tempcomp [headerSectionFormGroup]="form"></tempcomp>
+
+	<tempcomp [headerSectionFormGroup]="form" (updatedFormGrpEvent)="updateFormGroup($event)"></tempcomp>
 
 
 	<ul class="quiz-list">
