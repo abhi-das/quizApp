@@ -3,7 +3,9 @@
 	(ngSubmit)='onFeedbackSubmit(form.value)'
 	>
 
-	<tempcomp [headerSectionFormGroup]="form" (updatedFormGrpEvent)="updateFormGroup($event)"></tempcomp>
+	<tempcomp [headerSectionFormGroup]="form" 
+			(updatedFormGrpEvent)="updateFormGroup($event)" 
+			[ctrlName]="'inew'"></tempcomp>
 
 
 	<ul class="quiz-list">
