@@ -17,6 +17,10 @@ export class QuizComponent implements OnInit {
   ngOnInit() {
 
   	this.questions = [{
+      type: "text",
+      headline: "Hast Du noch weitere Informationen oder Anmerkungen für uns?",
+      required: false
+    }, {
       headline: "Wen möchtest Du versichern?",
       type: 'single-choice',
       nextEnable: false,

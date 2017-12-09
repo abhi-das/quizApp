@@ -1,4 +1,4 @@
-.mchoice {
+.user-text {
 	&__label {
 	    font-weight: 700;
 	    font-size: 1.3em;
@@ -14,12 +14,32 @@
 			font-size: 1.3em;
 		}
 	}
-	&__checkbox {
-		padding-left: 3.5em;
+	&__field-container {
+		margin-left: 3.5em;
 		padding-top: 1em;
+		
+	}
+	&__field {
+		font-size: 24px;
+		line-height: 30px;
+		width: 100%;
+	    resize: none;
+	    background: transparent;
+	    outline: none;
+	    box-sizing: border-box;
+		color: #5e6960;
+	    border-top: none;
+	    border-left: none;
+	    border-right: none;
+	    border-bottom: 1px solid #696969;
+
+	    &:focus {
+	    	border-color: transparent;	
+	    }
 	}
 	&__btn-next {
 		margin-left: 3.5em;
+	    
 		width: auto;
     	height: 35px;
 	    
@@ -31,7 +51,9 @@
 		    color: #275b62;
 	    }
 	}
+
 	.pretty .state label {
 		margin-left: 1em;
 	}
+
 }

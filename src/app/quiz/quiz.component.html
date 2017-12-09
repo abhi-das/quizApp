@@ -25,15 +25,22 @@
 	        	[fieldName]="'mchoice'+(idx)"
 	        	[navigateNext]="'#quest'+(idx+1)">
 	        </multiple-choice>
-
-	    </li>
-
-	    <li class="quiz-list__item">
-	        <div class="form-group">
-				<button class="btn btn-primary" name="submit" type="submit" [disabled]="!form.valid">Submit</button>
-			</div>
+	
+			<user-input *ngIf="question.type == 'text'" 
+				[qz]="question" 
+	        	[index]="(idx+1)"
+	        	[isLastQ]="isLastQ"
+	        	[headerSectionFormGroup]="form"
+	        	[fieldName]="'userchoice'+(idx)"
+	        	[navigateNext]="'#quest'+(idx+1)">
+	        </user-input>
+	        
 	    </li>
 	</ul>
+	<div class="form-group quiz-list__btn-container">
+		<button class="quiz-list__btn-submit" 
+			name="submit" type="submit" [disabled]="!form.valid">Submit</button>
+	</div>
 </form>
 
 <!-- <pre>{{your_form or control_name | json }}</pre> -->

@@ -11,11 +11,24 @@ form {
     padding-bottom: 5em;
     &__item {
         min-height: 15em;
-        padding: 2em 2em;
+        padding: 2em;
         text-align: left;
-        border-radius: 1em;
         margin-bottom: 1em;
-        color: #777777;
+    }
+    &__btn-container {
+        margin-left: 3.5em;
+        padding-right: 5em;
+        padding-left: 5em;
+        padding-bottom: 10em;
+    }
+    &__btn-submit {
+        outline: none;
+        border: none;
+        display: inline-block;
+        background-color: #98cfd6;
+        padding: .5em 1em;
+        font-size: 19px;
+        color: #275b62;
     }
 }
 

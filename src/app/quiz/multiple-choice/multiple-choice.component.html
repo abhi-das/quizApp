@@ -26,6 +26,8 @@
 	    </div>
 	</div>
 </div>
-<p class="btn btn-sm btn-primary mchoice__btn-next" 
-	*ngIf="qz.nextEnable && !isLastQ" 
-	[ngx-scroll-to]="navigateNext"> Next   <i class="fa fa-chevron-right"></i> </p>
+
+<p class="mchoice__btn-next" 
+	*ngIf="qz.nextEnable && !isLastQ" [ngx-scroll-to]="navigateNext">
+	<span class="mchoice__btn-next-text">OK   <i class="fa fa-check"></i></span>
+</p>

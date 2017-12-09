@@ -20,7 +20,16 @@
 	}
 	&__btn-next {
 		margin-left: 3.5em;
-		margin-top: 2em;
+		width: auto;
+    	height: 35px;
+	    
+	    &-text {
+	    	display: inline-block;
+	    	background-color: #98cfd6;
+	        padding: .5em 1em;
+	    	font-size: 19px;
+		    color: #275b62;
+	    }
 	}
 
 	.pretty .state label {

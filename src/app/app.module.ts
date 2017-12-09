@@ -13,6 +13,7 @@ import { SingleChoiceComponent } from './quiz/single-choice/single-choice.compon
 import { WindowRef } from './services/window.service';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { UserInputComponent } from './quiz/user-input/user-input.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     AppComponent,
     QuizComponent,
     MultipleChoiceComponent,
-    SingleChoiceComponent
+    SingleChoiceComponent,
+    UserInputComponent
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
   providers: [ WindowRef ],
