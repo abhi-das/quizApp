@@ -15,13 +15,16 @@ export class MultipleChoiceComponent implements OnInit {
 
   @Input() headerSectionFormGroup: FormGroup;
   @Input() fieldName: string;
+  @Input() qz: any;
 
   constructor(private _scrollToService: ScrollToService) {}
 
   ngOnInit() {
 
+    var isRequired = (this.qz.required ? Validators.required : null);
+
     this.selectedArr = [];
-    this.newFormControl = new FormControl(this.selectedArr, Validators.required);
+    this.newFormControl = new FormControl(this.selectedArr, isRequired );
     this.headerSectionFormGroup.addControl(this.fieldName, this.newFormControl);
   }
 

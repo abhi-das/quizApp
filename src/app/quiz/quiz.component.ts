@@ -20,6 +20,7 @@ export class QuizComponent implements OnInit {
       headline: "Wen möchtest Du versichern?",
       type: 'single-choice',
       nextEnable: false,
+      required: true,
       choices: [{
         "label": "Meine Familie mit Kindern",
         "value": "Meine Familie mit Kindern",
@@ -45,6 +46,7 @@ export class QuizComponent implements OnInit {
   		headline: "Lorem ipsum reprehenderit aliquip fugiat est Do sint?",
   		type: 'single-choice',
       nextEnable: true,
+      required: true,
       choices: [{
         "label": "Meine Familie mit Kindern",
         "value": "Meine Familie mit Kindern",
@@ -62,6 +64,7 @@ export class QuizComponent implements OnInit {
   		headline: "Bist Du Beamter oder im öffentlichen Dienst angestellt?",
   		type: 'multiple-choice',
       nextEnable: false,
+      required: false,
       choices: [{
         "label": "Ja",
         "value": "Ja",
@@ -75,6 +78,7 @@ export class QuizComponent implements OnInit {
   		headline: "Möchtest Du eine Forderungsausfalldeckung absichern?",
   		type: 'single-choice',
       nextEnable: true,
+      required: false,
       choices: [{
         "label": "Ja",
         "value": "Ja",
@@ -88,6 +92,7 @@ export class QuizComponent implements OnInit {
       headline: "Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?",
       type: 'multiple-choice',
       nextEnable: true,
+      required: false,
       choices: [{
         "label": "Mich mit Kind",
         "value": "Mich mit Kind",
@@ -101,6 +106,7 @@ export class QuizComponent implements OnInit {
   		headline: "Sunt laborum veniam aute magna do dolor ?",
   		type: 'single-choice',
       nextEnable: true,
+      required: true,
       choices: [{
         "label": "Mich mit Kind",
         "value": "Mich mit Kind",

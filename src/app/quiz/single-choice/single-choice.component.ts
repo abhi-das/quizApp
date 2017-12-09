@@ -16,13 +16,15 @@ export class SingleChoiceComponent implements OnInit {
 
   @Input() headerSectionFormGroup: FormGroup;
   @Input() fieldName: string;
-
+  @Input() qz: any;
 
   constructor(private _scrollToService: ScrollToService) {}
 
   ngOnInit() {
 
-    this.newFormControl = new FormControl(this.selectedValue, Validators.required);
+    var isRequired = (this.qz.required ? Validators.required : null);
+
+    this.newFormControl = new FormControl(this.selectedValue, isRequired);
     this.headerSectionFormGroup.addControl(this.fieldName, this.newFormControl);
 
   }
