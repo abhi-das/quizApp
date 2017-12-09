@@ -12,9 +12,7 @@ export class TempcompComponent implements OnInit {
 	@Input() headerSectionFormGroup: FormGroup;
 	@Input() ctrlName: string;
 
-
 	public control: FormControl;
-
 	public cSelection: string;
 
 	constructor() { }
