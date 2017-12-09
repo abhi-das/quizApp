@@ -14,7 +14,8 @@
 	        	[isLastQ]="isLastQ"
 	        	[headerSectionFormGroup]="form"
 	        	[fieldName]="'schoice'+(idx)"
-	        	[navigateNext]="'#quest'+(idx+1)"></single-choice>
+	        	[navigateNext]="'#quest'+(idx+1)">
+	        </single-choice>
 
 	        <multiple-choice *ngIf="question.type == 'multiple-choice'" 
 	        	[qz]="question" 
@@ -22,7 +23,8 @@
 	        	[isLastQ]="isLastQ"
 	        	[headerSectionFormGroup]="form"
 	        	[fieldName]="'mchoice'+(idx)"
-	        	[navigateNext]="'#quest'+(idx+1)"></multiple-choice>
+	        	[navigateNext]="'#quest'+(idx+1)">
+	        </multiple-choice>
 
 	    </li>
 

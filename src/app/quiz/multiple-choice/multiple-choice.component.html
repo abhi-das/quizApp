@@ -7,14 +7,16 @@
 		</p>
 		<p class="mchoice__label">{{qz.headline}}</p>
 	</div>
-	<div class="mchoice__checkbox" *ngFor='let choice of qz.choices'>
+	<div class="mchoice__checkbox" *ngFor='let choice of qz.choices; let idx = index'>
 
   		<div class="pretty p-icon p-pulse" [formGroup]="headerSectionFormGroup">
 
-	        <input type="checkbox" name="{{fieldName}}" value="{{choice.value}}" 
+	        <input id="{{fieldName}}{{index}}{{idx}}" 
+        		type="checkbox" name="{{fieldName}}{{index}}" value="{{choice.value}}" 
 	        	*ngIf="qz.nextEnable == true" (click)="navTo($event,'')"/>
 	        	
-	        <input type="checkbox" name="{{fieldName}}" value="{{choice.value}}" 
+	        <input id="{{fieldName}}{{index}}" 
+        		type="checkbox" name="{{fieldName}}{{index}}" value="{{choice.value}}" 
 	        	*ngIf="qz.nextEnable == false"  (click)="navTo($event,navigateNext)"/>
 
 	        <div class="state p-info">
