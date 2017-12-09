@@ -1,33 +1,39 @@
-import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'tempcomp',
   templateUrl: './tempcomp.component.html',
   styleUrls: ['./tempcomp.component.scss'],
-  inputs: ['headerSectionFormGroup', 'ctrlName'],
-  outputs: ['updatedFormGrpEvent']
+  inputs: ['headerSectionFormGroup', 'ctrlName']
 })
 export class TempcompComponent implements OnInit {
 
 	@Input() headerSectionFormGroup: FormGroup;
 	@Input() ctrlName: string;
 
-	public updatedFormGrpEvent = new EventEmitter<any>();
+	public elRef: ElementRef;
+	// public updatedFormGrpEvent = new EventEmitter<any>();
 
-	control: FormControl;
+	public control: FormControl;
 
-	constructor() { }
+	public cSelection: string;
+
+	constructor(private _elRef: ElementRef) { }
 
 	ngOnInit() {
-		// console.log('ctrlName >>> ',this.ctrlName);
-		this.control = new FormControl(this.ctrlName, Validators.required);
+
+		this.control = new FormControl(this.cSelection, Validators.required);
 
 		this.headerSectionFormGroup.addControl(this.ctrlName, this.control);
 
-		this.updatedFormGrpEvent.emit(this.headerSectionFormGroup);
+		// this.updatedFormGrpEvent.emit(this.headerSectionFormGroup);
 	}
 
+	onChange($e) {
+		this.cSelection = $e.target.value;
+		this.control.setValue(this.cSelection);
+	}
 	// updateExisting(name:string) {
 
 

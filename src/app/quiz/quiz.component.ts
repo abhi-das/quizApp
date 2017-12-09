@@ -120,14 +120,7 @@ export class QuizComponent implements OnInit {
 
     this.form = new FormGroup({});
 
-    console.log('fmm :: existing form group > ',this.form);
-  }
-
-  updateFormGroup(fmm) {
-    console.log('fmm :: new form group > ',fmm);
-
-    // Get new form control from child and update this.form formgroup object 
-
+    // console.log('fmm :: existing form group > ',this.form);
   }
 
   onFeedbackSubmit(feedback: any) {

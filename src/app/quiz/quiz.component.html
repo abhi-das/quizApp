@@ -3,9 +3,7 @@
 	(ngSubmit)='onFeedbackSubmit(form.value)'
 	>
 
-	<tempcomp [headerSectionFormGroup]="form" 
-			(updatedFormGrpEvent)="updateFormGroup($event)" 
-			[ctrlName]="'inew'"></tempcomp>
+	<tempcomp [headerSectionFormGroup]="form" [ctrlName]="'inew'"></tempcomp>
 
 
 	<ul class="quiz-list">
@@ -34,3 +32,5 @@
 	    </li>
 	</ul>
 </form>
+
+<!-- <pre>{{your_form or control_name | json }}</pre> -->
