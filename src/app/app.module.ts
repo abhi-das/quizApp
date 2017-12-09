@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -12,20 +13,23 @@ import { SingleChoiceComponent } from './quiz/single-choice/single-choice.compon
 import { WindowRef } from './services/window.service';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { TempcompComponent } from './quiz/tempcomp/tempcomp.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    QuizComponent,
-    MultipleChoiceComponent,
-    SingleChoiceComponent
-  ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     ScrollToModule.forRoot()
+  ],
+  declarations: [
+    AppComponent,
+    QuizComponent,
+    MultipleChoiceComponent,
+    SingleChoiceComponent,
+    TempcompComponent
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
   providers: [ WindowRef ],

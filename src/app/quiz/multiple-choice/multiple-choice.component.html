@@ -9,10 +9,10 @@
 	</div>
 	<div class="mchoice__checkbox" *ngFor='let choice of qz.choices'>
   		<div class="pretty p-icon p-pulse">
-	        <input type="checkbox" name="choice+{{index}}" value="{{choice.value}}" 
+	        <input type="checkbox" name="mchoice{{index}}" value="{{choice.value}}" 
 	        	*ngIf="qz.nextEnable == true"/>
 	        	
-	        <input type="checkbox" name="choice+{{index}}" value="{{choice.value}}" 
+	        <input type="checkbox" name="mchoice{{index}}" value="{{choice.value}}" 
 	        	*ngIf="qz.nextEnable == false" (click)="navTo(navigateNext)"/>
 
 	        <div class="state p-info">

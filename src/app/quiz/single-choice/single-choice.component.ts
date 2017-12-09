@@ -1,5 +1,6 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, Input } from '@angular/core';
 import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'single-choice',
@@ -9,10 +10,27 @@ import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scrol
 })
 export class SingleChoiceComponent implements OnInit {
 
+  eleRef: ElementRef;
+  myGroup: FormGroup;
+  ctrlName: string;
 
-  constructor(private _scrollToService: ScrollToService) {}
+  @Input() index: string;
 
-  ngOnInit() {}
+  constructor(private _scrollToService: ScrollToService, private eRef: ElementRef) {}
+
+  ngOnInit() {
+
+    // this.eleRef = this.eRef.nativeElement;
+    // // console.log(this.eleRef);
+    // this.ctrlName = 'schoice'+this.index;
+
+    // console.log(this.index);
+
+    // this.myGroup = new FormGroup({
+    //   schoice1: new FormControl()
+    // })
+
+  }
 
   public navTo(navId) {
 

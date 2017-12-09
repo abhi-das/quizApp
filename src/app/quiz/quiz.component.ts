@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms'
+
 
 @Component({
   selector: 'quiz',
@@ -8,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class QuizComponent implements OnInit {
 
   questions: any;
+  form: FormGroup;
 
   constructor() { }
 
@@ -112,6 +115,29 @@ export class QuizComponent implements OnInit {
         "selected": false
       }]
   	}];
+
+    // Form Controls
+
+    this.form = new FormGroup({
+      ttm: new FormControl()
+    });
+
   }
+
+  updateFormGroup() {
+
+    // Get new form control from child and update this.form formgroup object 
+
+  }
+
+  onFeedbackSubmit(feedback: any) {
+    console.log("feedback > ", feedback);
+  }
+
+
+
+
+
+
 
 }

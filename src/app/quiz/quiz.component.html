@@ -1,5 +1,12 @@
-<form role="form">
-	<ul class="quiz-list"  >
+<form
+	[formGroup] = 'form'
+	(ngSubmit)='onFeedbackSubmit(form.value)'
+	>
+	
+	<tempcomp [headerSectionFormGroup]="form"></tempcomp>
+
+
+	<ul class="quiz-list">
 
 	    <li id="quest{{idx}}" class="quiz-list__item" 
 	    	*ngFor="let question of questions; let idx = index; let isLastQ = last" >

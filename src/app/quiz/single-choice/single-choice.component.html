@@ -10,10 +10,10 @@
 	<div class="schoice__radio" *ngFor='let choice of qz.choices'>
 	    <div class="pretty p-icon p-round p-pulse">
 
-	        <input type="radio" name="icon_solid+{{index}}" value="{{choice.value}}" 
+	        <input type="radio" name="schoice{{index}}" value="{{choice.value}}"
 	        	*ngIf="qz.nextEnable == true"/>
 
-	        <input type="radio" name="icon_solid+{{index}}" value="{{choice.value}}" 
+	        <input type="radio" name="schoice{{index}}" value="{{choice.value}}"
 	        	*ngIf="qz.nextEnable == false" (click)="navTo(navigateNext)"/>
 
 	        <div class="state p-info">
