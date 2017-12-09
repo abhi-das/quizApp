@@ -9,10 +9,18 @@
 	&__item {
 		display: flex;
 		flex-direction: row;
-		align-items: center;
 		&-count {
 			font-size: 1.3em;
 		}
+		p {
+			position: relative;
+			margin-right: 1.5em;
+		}
+	}
+	&__item-icon {
+		position: absolute;
+	    top: 8px;
+    	left: 1em;
 	}
 	&__field-container {
 		margin-left: 3.5em;
@@ -39,7 +47,7 @@
 	}
 	&__btn-next {
 		margin-left: 3.5em;
-	    
+	    cursor: pointer;
 		width: auto;
     	height: 35px;
 	    
