@@ -2,6 +2,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
 import { QuizSevice } from '../services/quiz.service';
+import { Response } from '@angular/http';
 
 @Component({
   selector: 'quiz',
@@ -19,120 +20,10 @@ export class QuizComponent implements OnInit {
 
   ngOnInit() {
 
-    this.qzData = this._qzSer.getQuiz().subscribe((res) => {
-      console.log('right here > ', res.questionnaire.questions);
-      this.questions = res.questionnaire.questions;
+    this.qzData = this._qzSer.getQuiz().subscribe((res: Response) => {
+      // console.log('right here > ', res['questionnaire']['questions']);
+      this.questions = res['questionnaire']['questions'];
     });
-
-  	/*this.questions = [{
-      question_type: "text",
-      headline: "Hast Du noch weitere Informationen oder Anmerkungen für uns?",
-      required: false
-    }, {
-      headline: "Wen möchtest Du versichern?",
-      question_type: 'single-choice',
-      nextEnable: false,
-      required: true,
-      choices: [{
-        "label": "Meine Familie mit Kindern",
-        "value": "Meine Familie mit Kindern",
-        "selected": false
-      }, {
-        "label": "Meine Familie ohne Kinder",
-        "value": "Meine Familie ohne Kinder",
-        "selected": false
-      }, {
-        "label": "Mich ohne Kind",
-        "value": "Mich ohne Kind",
-        "selected": false
-      }, {
-        "label": "Mich mit Kind",
-        "value": "Mich mit Kind",
-        "selected": false
-      }, {
-        "label": "Mich und meinen Lebenspartner",
-        "value": "Mich und meinen Lebenspartner",
-        "selected": false
-      }]
-    }, {
-  		headline: "Lorem ipsum reprehenderit aliquip fugiat est Do sint?",
-  		question_type: 'single-choice',
-      nextEnable: true,
-      required: true,
-      choices: [{
-        "label": "Meine Familie mit Kindern",
-        "value": "Meine Familie mit Kindern",
-        "selected": false
-      }, {
-        "label": "Meine Familie ohne Kinder",
-        "value": "Meine Familie ohne Kinder",
-        "selected": false
-      }, {
-        "label": "Mich ohne Kind",
-        "value": "Mich ohne Kind",
-        "selected": false
-      }]
-  	}, {
-  		headline: "Bist Du Beamter oder im öffentlichen Dienst angestellt?",
-  		question_type: 'multiple-choice',
-      nextEnable: false,
-      required: false,
-      choices: [{
-        "label": "Ja",
-        "value": "Ja",
-        "selected": false
-      }, {
-        "label": "Nein",
-        "value": "Nein",
-        "selected": false
-      }]
-  	}, {
-  		headline: "Möchtest Du eine Forderungsausfalldeckung absichern?",
-  		question_type: 'single-choice',
-      nextEnable: true,
-      required: false,
-      choices: [{
-        "label": "Ja",
-        "value": "Ja",
-        "selected": false
-      }, {
-        "label": "Nein",
-        "value": "Nein",
-        "selected": false
-      }]
-  	}, {
-      headline: "Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?",
-      question_type: 'multiple-choice',
-      nextEnable: true,
-      required: false,
-      choices: [{
-        "label": "Mich mit Kind",
-        "value": "Mich mit Kind",
-        "selected": false
-      }, {
-        "label": "Mich und meinen Lebenspartner",
-        "value": "Mich und meinen Lebenspartner",
-        "selected": false
-      }]
-    }, {
-  		headline: "Sunt laborum veniam aute magna do dolor ?",
-  		question_type: 'single-choice',
-      nextEnable: true,
-      required: true,
-      choices: [{
-        "label": "Mich mit Kind",
-        "value": "Mich mit Kind",
-        "selected": false
-      }, {
-        "label": "Irure est cillum.",
-        "value": "Lorem ipsum officia labore.",
-        "selected": false
-      }, {
-        "label": "Sunt do fugiat ea tempor.",
-        "value": "Cillum ut.",
-        "selected": false
-      }]
-  	}];*/
 
     // Form Controls
     this.form = new FormGroup({});
@@ -140,7 +31,7 @@ export class QuizComponent implements OnInit {
 
   onFeedbackSubmit(feedback: any, showDtContainer: string) {
 
-    console.log("feedback > ", showDtContainer);
+    // console.log("feedback > ", showDtContainer);
 
     this.formData = feedback;
 

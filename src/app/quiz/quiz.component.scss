@@ -26,10 +26,14 @@ form {
     &__btn-submit {
         outline: none;
         border: none;
-        display: inline-block;
-        background-color: #98cfd6;
-        padding: .5em 1em;
-        font-size: 19px;
-        color: #275b62;
+        background-color: transparent;
+        &-text {
+            display: inline-block;
+            background-color: #98cfd6;
+            padding: .5em 1em;
+            font-size: 19px;
+            color: #275b62;
+            margin-right: .5em;
+        }
     }
 }

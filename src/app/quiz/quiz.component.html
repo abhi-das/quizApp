@@ -39,7 +39,10 @@
 	</ul>
 	<div class="form-group quiz-list__btn-container">
 		<button class="quiz-list__btn-submit" 
-			name="submit" type="submit" [disabled]="!form.valid">Submit</button>
+			name="submit" type="submit" [disabled]="!form.valid">
+			<span class="quiz-list__btn-submit-text">Submit</span>
+			<span> show <strong>Form Data</strong></span>
+		</button>
 	</div>
 </form>
 
