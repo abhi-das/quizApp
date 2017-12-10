@@ -1,3 +1,5 @@
+@import '../../base-style/variables';
+
 .schoice {
 	&__label {
 	    font-weight: 700;
@@ -9,7 +11,8 @@
 	&__item {
 		display: flex;
 		flex-direction: row;
-		color: #5e6960;
+		color: $blue-color-1x;
+	    align-items: baseline;
 		&-count {
 			font-size: 1.3em;
 		}
@@ -26,7 +29,7 @@
 	&__radio {
 		padding-left: 3.5em;
 		padding-top: 1em;
-		color: #5e6960;
+		color: $blue-color-1x;
 	}
 	&__btn-next {
 		margin-left: 3.5em;
@@ -35,10 +38,10 @@
 	    cursor: pointer;
 	    &-text {
 	    	display: inline-block;
-	    	background-color: #98cfd6;
+	    	background-color: $blue-color-2x;
 	        padding: .5em 1em;
 	    	font-size: 19px;
-		    color: #275b62;
+		    color: $blue-color-1x;
 		    margin-right: .5em;
 	    }
 	}

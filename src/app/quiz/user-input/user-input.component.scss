@@ -1,3 +1,5 @@
+@import '../../base-style/variables';
+
 .user-text {
 	&__label {
 	    font-weight: 700;
@@ -9,7 +11,8 @@
 	&__item {
 		display: flex;
 		flex-direction: row;
-		color: #5e6960;
+		color: $blue-color-1x;
+		align-items: baseline;
 		&-count {
 			font-size: 1.3em;
 		}
@@ -36,11 +39,11 @@
 	    background: transparent;
 	    outline: none;
 	    box-sizing: border-box;
-		color: #5e6960;
+		color: $blue-color-1x;
 	    border-top: none;
 	    border-left: none;
 	    border-right: none;
-	    border-bottom: 1px solid #696969;
+	    border-bottom: 1px solid $blue-color-3x;
 
 	    &:focus {
 	    	border-color: transparent;	
@@ -51,10 +54,10 @@
 	    cursor: pointer;
 		width: auto;
     	height: 35px;
-	    color: #275b62;
+	    color: $blue-color-1x;
 	    &-text {
 	    	display: inline-block;
-	    	background-color: #98cfd6;
+	    	background-color: $blue-color-2x;
 	        padding: .5em 1em;
 	    	font-size: 19px;
 		    
