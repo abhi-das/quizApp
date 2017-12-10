@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms'
-
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'quiz',
@@ -11,6 +10,7 @@ export class QuizComponent implements OnInit {
 
   questions: any;
   form: FormGroup;
+  formData: object;
 
   constructor() { }
 
@@ -127,20 +127,15 @@ export class QuizComponent implements OnInit {
   	}];
 
     // Form Controls
-
     this.form = new FormGroup({});
-
-    // console.log('fmm :: existing form group > ',this.form);
   }
 
   onFeedbackSubmit(feedback: any) {
-    console.log("feedback > ", feedback);
+
+    // console.log("feedback > ", feedback);
+
+    this.formData = feedback;
+
   }
-
-
-
-
-
-
 
 }

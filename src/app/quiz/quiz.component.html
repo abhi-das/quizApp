@@ -1,6 +1,6 @@
 <form
 	[formGroup] = 'form'
-	(ngSubmit)='onFeedbackSubmit(form.value)'
+	(ngSubmit)="onFeedbackSubmit(form.value)"
 	>
 
 	<ul class="quiz-list">
@@ -43,4 +43,4 @@
 	</div>
 </form>
 
-<!-- <pre>{{your_form or control_name | json }}</pre> -->
+<feedback-data  *ngIf="formData" [formDataValues]="formData"></feedback-data>
