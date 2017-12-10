@@ -4,12 +4,12 @@
 	    font-size: 1.3em;
 	    display: inline-block;
 	    margin-left: 1em;
-	    color: #5e6960;
+	    
 	}
 	&__item {
 		display: flex;
 		flex-direction: row;
-
+		color: #5e6960;
 		&-count {
 			font-size: 1.3em;
 		}
@@ -26,6 +26,7 @@
 	&__checkbox {
 		padding-left: 3.5em;
 		padding-top: 1em;
+		color: #5e6960;
 	}
 	&__btn-next {
 		margin-left: 3.5em;
