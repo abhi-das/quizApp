@@ -1,5 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
+import { QuizSevice } from '../services/quiz.service';
 
 @Component({
   selector: 'quiz',
@@ -11,18 +13,24 @@ export class QuizComponent implements OnInit {
   questions: any;
   form: FormGroup;
   formData: object;
+  qzData: any;
 
-  constructor() { }
+  constructor(private _scrollToService: ScrollToService, private _qzSer: QuizSevice) { }
 
   ngOnInit() {
 
-  	this.questions = [{
-      type: "text",
+    this.qzData = this._qzSer.getQuiz().subscribe((res) => {
+      console.log('right here > ', res.questionnaire.questions);
+      this.questions = res.questionnaire.questions;
+    });
+
+  	/*this.questions = [{
+      question_type: "text",
       headline: "Hast Du noch weitere Informationen oder Anmerkungen für uns?",
       required: false
     }, {
       headline: "Wen möchtest Du versichern?",
-      type: 'single-choice',
+      question_type: 'single-choice',
       nextEnable: false,
       required: true,
       choices: [{
@@ -48,7 +56,7 @@ export class QuizComponent implements OnInit {
       }]
     }, {
   		headline: "Lorem ipsum reprehenderit aliquip fugiat est Do sint?",
-  		type: 'single-choice',
+  		question_type: 'single-choice',
       nextEnable: true,
       required: true,
       choices: [{
@@ -66,7 +74,7 @@ export class QuizComponent implements OnInit {
       }]
   	}, {
   		headline: "Bist Du Beamter oder im öffentlichen Dienst angestellt?",
-  		type: 'multiple-choice',
+  		question_type: 'multiple-choice',
       nextEnable: false,
       required: false,
       choices: [{
@@ -80,7 +88,7 @@ export class QuizComponent implements OnInit {
       }]
   	}, {
   		headline: "Möchtest Du eine Forderungsausfalldeckung absichern?",
-  		type: 'single-choice',
+  		question_type: 'single-choice',
       nextEnable: true,
       required: false,
       choices: [{
@@ -94,7 +102,7 @@ export class QuizComponent implements OnInit {
       }]
   	}, {
       headline: "Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?",
-      type: 'multiple-choice',
+      question_type: 'multiple-choice',
       nextEnable: true,
       required: false,
       choices: [{
@@ -108,7 +116,7 @@ export class QuizComponent implements OnInit {
       }]
     }, {
   		headline: "Sunt laborum veniam aute magna do dolor ?",
-  		type: 'single-choice',
+  		question_type: 'single-choice',
       nextEnable: true,
       required: true,
       choices: [{
@@ -124,18 +132,23 @@ export class QuizComponent implements OnInit {
         "value": "Cillum ut.",
         "selected": false
       }]
-  	}];
+  	}];*/
 
     // Form Controls
     this.form = new FormGroup({});
   }
 
-  onFeedbackSubmit(feedback: any) {
+  onFeedbackSubmit(feedback: any, showDtContainer: string) {
 
-    // console.log("feedback > ", feedback);
+    console.log("feedback > ", showDtContainer);
 
     this.formData = feedback;
 
+    const config: ScrollToConfigOptions = {
+      target: showDtContainer
+    };
+ 
+    this._scrollToService.scrollTo(config);
   }
 
 }

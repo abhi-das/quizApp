@@ -1,6 +1,6 @@
 <form
 	[formGroup] = 'form'
-	(ngSubmit)="onFeedbackSubmit(form.value)"
+	(ngSubmit)="onFeedbackSubmit(form.value, '#formDataContainer')"
 	>
 
 	<ul class="quiz-list">
@@ -8,7 +8,7 @@
 	    <li id="quest{{idx}}" class="quiz-list__item" 
 	    	*ngFor="let question of questions; let idx = index; let isLastQ = last" >
 
-	        <single-choice *ngIf="question.type == 'single-choice'" 
+	        <single-choice *ngIf="question.question_type == 'single-choice'" 
 	        	[qz]="question" 
 	        	[index]="(idx+1)"
 	        	[isLastQ]="isLastQ"
@@ -17,7 +17,7 @@
 	        	[navigateNext]="'#quest'+(idx+1)">
 	        </single-choice>
 
-	        <multiple-choice *ngIf="question.type == 'multiple-choice'" 
+	        <multiple-choice *ngIf="question.question_type == 'multiple-choice'" 
 	        	[qz]="question" 
 	        	[index]="(idx+1)"
 	        	[isLastQ]="isLastQ"
@@ -26,7 +26,7 @@
 	        	[navigateNext]="'#quest'+(idx+1)">
 	        </multiple-choice>
 	
-			<user-input *ngIf="question.type == 'text'" 
+			<user-input *ngIf="question.question_type == 'text'" 
 				[qz]="question" 
 	        	[index]="(idx+1)"
 	        	[isLastQ]="isLastQ"
@@ -43,4 +43,5 @@
 	</div>
 </form>
 
-<feedback-data  *ngIf="formData" [formDataValues]="formData"></feedback-data>
+<!-- <pre>{{your_form or control_name | json }}</pre> -->
+<feedback-data [formDataValues]="formData"></feedback-data>

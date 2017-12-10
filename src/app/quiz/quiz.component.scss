@@ -1,20 +1,16 @@
 form {
     font-family: 'Montserrat', sans-serif;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .quiz-list {
     list-style: none;
     margin-top: 2em;
-    padding-left: 1em;
-    padding-right: 1em;
     padding-bottom: 5em;
-
-   @media (min-width: 768px) {
-        padding-left: 5em;
-        padding-right: 5em;
-    }
-
+    padding-left: 0;
+    
     &__item {
         min-height: 15em;
         padding: 2em;

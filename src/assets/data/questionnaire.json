@@ -10,6 +10,7 @@
         "headline": "Wen möchtest Du versichern?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -46,6 +47,7 @@
         "headline": "Bist Du Beamter oder im öffentlichen Dienst angestellt?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -67,6 +69,7 @@
         "headline": "Möchtest Du eine Forderungsausfalldeckung absichern?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -88,6 +91,7 @@
         "headline": "Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -109,6 +113,7 @@
         "headline": "Bist Du Eigentümer einer oder mehrerer Immobilien?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -153,6 +158,7 @@
         "headline": "Gehört Dir eine selbstbewohnte Immobilie?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -184,6 +190,7 @@
         "headline": "Hast Du eine oder mehrere vermietete Immobilien?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -215,6 +222,7 @@
         "headline": "Möchtest Du in nächster Zeit etwas bauen oder umbauen?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -236,6 +244,7 @@
         "headline": "Wie wichtig ist Dir die Absicherung gegen beruflichen Schlüsselverlust?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -257,6 +266,7 @@
         "headline": "Möchtest Du den Verlust privater Schlüssel absichern?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -278,6 +288,7 @@
         "headline": "Möchtest Du im Ausland abgesichert sein?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -304,6 +315,7 @@
         "headline": "Hast Du ein Segelboot?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -340,6 +352,7 @@
         "headline": "Hast Du ein Motorboot?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -376,6 +389,7 @@
         "headline": "Möchtest Du bei einem Schadensfall einen Teil selbst bezahlen?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -397,6 +411,7 @@
         "headline": "Hast Du aktuell schon eine Privathaftpflichtversicherung?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -441,6 +456,7 @@
         "headline": "Wie viele Haftpflichtschäden hattest Du in den letzten 5 Jahren?",
         "description": null,
         "required": false,
+        "nextEnable": false,
         "multiple": "false",
         "choices": [
           {
@@ -477,6 +493,7 @@
         "headline": "Was wäre Dein Wunschtermin für den Beginn der Privathaftpflichtversicherung?",
         "description": null,
         "required": false,
+        "nextEnable": true,
         "multiline": "false",
         "jumps": []
       },
@@ -486,6 +503,7 @@
         "headline": "Hast Du noch weitere Informationen oder Anmerkungen für uns?",
         "description": null,
         "required": false,
+        "nextEnable": true,
         "multiline": "true",
         "jumps": []
       }

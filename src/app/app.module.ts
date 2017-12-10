@@ -16,10 +16,14 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { UserInputComponent } from './quiz/user-input/user-input.component';
 import { FeedbackDataComponent } from './quiz/feedback-data/feedback-data.component';
 
+import { HttpModule } from '@angular/http';
+import { QuizSevice } from './services/quiz.service';
+
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
@@ -34,7 +38,7 @@ import { FeedbackDataComponent } from './quiz/feedback-data/feedback-data.compon
     FeedbackDataComponent
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
-  providers: [ WindowRef ],
+  providers: [ WindowRef, QuizSevice ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
