@@ -4,7 +4,7 @@
 			<span class="schoice__item-count">{{index}}</span> 
 			<i class="schoice__item-icon fa fa-long-arrow-right"></i>
 		</p>
-		<p class="schoice__label">{{qz.headline}}</p>
+		<p class="schoice__label">{{qz.headline}} <span class="schoice__require" *ngIf="qz.required">*</span> </p>
 	</div>
 
 	<div class="schoice__radio" *ngFor='let choice of qz.choices'>

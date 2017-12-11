@@ -4,7 +4,7 @@
 			<span class="user-text__item-count">{{index}}</span> 
 			<i class="user-text__item-icon fa fa-long-arrow-right"></i>
 		</p>
-		<p class="user-text__label">{{qz.headline}}</p>
+		<p class="user-text__label">{{qz.headline}} <span class="user-text__require" *ngIf="qz.required">*</span> </p>
 	</div>
 	<div class="user-text__field-container">
 		<input class="user-text__field" type="text" autocomplete="false" name="{{fieldName}}" 

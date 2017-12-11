@@ -9,7 +9,7 @@
         "identifier": "list_12110962",
         "headline": "Wen möchtest Du versichern?",
         "description": null,
-        "required": false,
+        "required": true,
         "nextEnable": true,
         "multiple": "false",
         "choices": [
@@ -90,7 +90,7 @@
         "identifier": "list_12110966",
         "headline": "Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?",
         "description": null,
-        "required": false,
+        "required": true,
         "nextEnable": false,
         "multiple": "false",
         "choices": [
@@ -265,7 +265,7 @@
         "identifier": "list_13913438",
         "headline": "Möchtest Du den Verlust privater Schlüssel absichern?",
         "description": null,
-        "required": false,
+        "required": true,
         "nextEnable": false,
         "multiple": "false",
         "choices": [
@@ -388,7 +388,7 @@
         "identifier": "list_12110965",
         "headline": "Möchtest Du bei einem Schadensfall einen Teil selbst bezahlen?",
         "description": null,
-        "required": false,
+        "required": true,
         "nextEnable": false,
         "multiple": "false",
         "choices": [
@@ -492,7 +492,7 @@
         "identifier": "date_22039590",
         "headline": "Was wäre Dein Wunschtermin für den Beginn der Privathaftpflichtversicherung?",
         "description": null,
-        "required": false,
+        "required": true,
         "nextEnable": true,
         "multiline": "false",
         "jumps": []

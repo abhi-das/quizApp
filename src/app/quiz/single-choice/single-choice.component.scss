@@ -26,6 +26,11 @@
 	    top: .5em;
     	left: 1.5em;
 	}
+
+	&__require {
+		color: $color-red;
+		font-size: 1em;
+	}
 	&__radio {
 		padding-left: 3.5em;
 		padding-top: 1em;
