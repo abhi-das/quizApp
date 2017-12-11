@@ -34,6 +34,19 @@ https://github.com/loiane/angular-bootstrap-example
 ##ScrollTo
 https://www.npmjs.com/package/@nicky-lenaers/ngx-scroll-to
 
-## Set Alias of ngh
+## Set Alias of ng; in case commond not found issue
 $ alias ng=" C:/Users/s7527620/AppData/Roaming/npm/node_modules/@angular/cli/bin/ng"
+
+## Set gh-pages alias in local; in case commond not found issue
+
+$ alias ngh=" C:/Users/s7527620/AppData/Roaming/npm/node_modules/angular-cli-ghpages/bin/angular-cli-ghpages"
+	
+##You can now specify the port in the .angular-cli.json under the defaults:
+
+"defaults": {
+  "serve": {
+    "port": 8080
+  }
+}
+
 
