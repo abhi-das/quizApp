@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { QuizProgressService } from '../../services/quiz.progress.service';
 
 @Component({
   selector: 'single-choice',
@@ -17,23 +18,30 @@ export class SingleChoiceComponent implements OnInit {
   @Input() headerSectionFormGroup: FormGroup;
   @Input() fieldName: string;
   @Input() qz: any;
+  isTouch: boolean;
 
-  constructor(private _scrollToService: ScrollToService) {}
+  constructor(private _scrollToService: ScrollToService, private _qzProgressSrv: QuizProgressService) {}
 
   ngOnInit() {
 
     var isRequired = (this.qz.required ? Validators.required : null);
-
+    this.isTouch = false;
     this.newFormControl = new FormControl(this.selectedValue, isRequired);
     this.headerSectionFormGroup.addControl(this.fieldName, this.newFormControl);
+    this.selectedValue = '';
 
   }
 
   navTo($ev,navId) {
 
+    if(this.selectedValue ==='') {
+      this._qzProgressSrv.updateQuizCount('inc');
+    }
+
     this.selectedValue = $ev.target.value;
     this.newFormControl.setValue(this.selectedValue);
-
+    this.isTouch = true;
+    
     if(navId) {
 
     	const config: ScrollToConfigOptions = {

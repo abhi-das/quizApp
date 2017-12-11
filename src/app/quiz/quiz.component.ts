@@ -1,8 +1,10 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
 import { QuizSevice } from '../services/quiz.service';
 import { Response } from '@angular/http';
+import { QuizProgressService } from '../services/quiz.progress.service';
+
 
 @Component({
   selector: 'quiz',
@@ -15,8 +17,9 @@ export class QuizComponent implements OnInit {
   form: FormGroup;
   formData: object;
   qzData: any;
+  count: number;
 
-  constructor(private _scrollToService: ScrollToService, private _qzSer: QuizSevice) { }
+  constructor(private _scrollToService: ScrollToService, private _qzSer: QuizSevice, private _qzProgressSrv: QuizProgressService) { }
 
   ngOnInit() {
 
@@ -27,12 +30,13 @@ export class QuizComponent implements OnInit {
 
     // Form Controls
     this.form = new FormGroup({});
+
+    this._qzProgressSrv.currentQuizCount.subscribe(cVal => this.count = cVal );
   }
 
   onFeedbackSubmit(feedback: any, showDtContainer: string) {
-
-    // console.log("feedback > ", showDtContainer);
-
+    
+    // console.log("count > ", this.count);
     this.formData = feedback;
 
     const config: ScrollToConfigOptions = {

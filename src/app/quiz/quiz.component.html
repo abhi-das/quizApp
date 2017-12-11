@@ -46,5 +46,12 @@
 	</div>
 </form>
 
+<div class="progress">
+	<div class="progress__container">
+		<span class="progress__count-current">{{count}}</span>
+		<span><strong>Total Qestions: <span class="progress__count-total">20</span></strong></span>
+	</div>
+</div>
 <!-- <pre>{{your_form or control_name | json }}</pre> -->
+<!--*ngIf="userForm.get('gender').invalid"> -->
 <feedback-data [formDataValues]="formData"></feedback-data>

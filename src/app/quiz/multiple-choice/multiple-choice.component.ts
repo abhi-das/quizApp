@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { QuizProgressService } from '../../services/quiz.progress.service';
 
 @Component({
   selector: 'multiple-choice',
@@ -16,13 +17,14 @@ export class MultipleChoiceComponent implements OnInit {
   @Input() headerSectionFormGroup: FormGroup;
   @Input() fieldName: string;
   @Input() qz: any;
+  
+  public checkedCount: number;
 
-  constructor(private _scrollToService: ScrollToService) {}
+  constructor(private _scrollToService: ScrollToService, private _qzProgressSrv: QuizProgressService) {}
 
   ngOnInit() {
 
     var isRequired = (this.qz.required ? Validators.required : null);
-
     this.selectedArr = [];
     this.newFormControl = new FormControl(this.selectedArr, isRequired );
     this.headerSectionFormGroup.addControl(this.fieldName, this.newFormControl);
@@ -30,14 +32,21 @@ export class MultipleChoiceComponent implements OnInit {
 
   navTo($ev, navId) {
 
+    // console.log( 'choice >>> ',this.headerSectionFormGroup.get(this.fieldName).value);
+
     if($ev.target.checked) {
     
       this.selectedArr.push($ev.target.value);
-
     } else {
 
       this.selectedArr.splice(this.selectedArr.indexOf($ev.target.value), 1);
+    }
 
+    // IsAttemp the quiz and increase or decrease the attempt count
+    if($ev.target.checked && this.selectedArr.length==1) {
+      this._qzProgressSrv.updateQuizCount('inc');
+    } else if(!$ev.target.checked && this.selectedArr.length<1) {
+      this._qzProgressSrv.updateQuizCount('dec');
     }
 
     this.newFormControl.setValue(this.selectedArr);
@@ -51,4 +60,5 @@ export class MultipleChoiceComponent implements OnInit {
       this._scrollToService.scrollTo(config);
     }
   }
+
 }

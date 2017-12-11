@@ -10,14 +10,15 @@ import { AppComponent } from './app.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { MultipleChoiceComponent } from './quiz/multiple-choice/multiple-choice.component';
 import { SingleChoiceComponent } from './quiz/single-choice/single-choice.component';
+import { UserInputComponent } from './quiz/user-input/user-input.component';
 import { WindowRef } from './services/window.service';
 
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-import { UserInputComponent } from './quiz/user-input/user-input.component';
 import { FeedbackDataComponent } from './quiz/feedback-data/feedback-data.component';
 
 import { HttpModule } from '@angular/http';
 import { QuizSevice } from './services/quiz.service';
+import { QuizProgressService } from './services/quiz.progress.service';
 
 @NgModule({
   imports: [
@@ -38,7 +39,7 @@ import { QuizSevice } from './services/quiz.service';
     FeedbackDataComponent
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
-  providers: [ WindowRef, QuizSevice ],
+  providers: [ WindowRef, QuizSevice, QuizProgressService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

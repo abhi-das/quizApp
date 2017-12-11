@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ScrollToService, ScrollToConfigOptions } from '@nicky-lenaers/ngx-scroll-to';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { QuizProgressService } from '../../services/quiz.progress.service';
 
 @Component({
   selector: 'user-input',
@@ -18,7 +19,7 @@ export class UserInputComponent implements OnInit {
 	@Input() fieldName: string;
 	@Input() qz: any;
 
-	constructor(private _scrollToService: ScrollToService) {}
+	constructor(private _scrollToService: ScrollToService, private _qzProgressSrv: QuizProgressService) {}
 
 	ngOnInit() {
 
@@ -33,16 +34,25 @@ export class UserInputComponent implements OnInit {
 	navTo($ev,navId) {
 
 	    this.userFieldVal = $ev.target.value;
-	    this.newFormControl.setValue(this.userFieldVal);
 
-	    if(navId) {
+		if(this.userFieldVal !== '') {
 
-	    	const config: ScrollToConfigOptions = {
-	        target: navId
-	      };
-	   
-	      this._scrollToService.scrollTo(config);
-	    }
+			this._qzProgressSrv.updateQuizCount('inc');
+			this.newFormControl.setValue(this.userFieldVal);
+
+			if(navId) {
+
+				const config: ScrollToConfigOptions = {
+				target: navId
+			};
+		
+			this._scrollToService.scrollTo(config);
+			}
+		} else {
+			this._qzProgressSrv.updateQuizCount('dec');
+		}
+
+	    
   	}
 
 }
