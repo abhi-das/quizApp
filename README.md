@@ -33,3 +33,7 @@ https://github.com/loiane/angular-bootstrap-example
 
 ##ScrollTo
 https://www.npmjs.com/package/@nicky-lenaers/ngx-scroll-to
+
+## Set Alias of ngh
+$ alias ng=" C:/Users/s7527620/AppData/Roaming/npm/node_modules/@angular/cli/bin/ng"
+
