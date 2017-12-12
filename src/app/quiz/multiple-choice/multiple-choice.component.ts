@@ -18,6 +18,7 @@ export class MultipleChoiceComponent implements OnInit {
   @Input() fieldName: string;
   @Input() qz: any;
   
+  public istest: boolean;
   public checkedCount: number;
 
   constructor(private _scrollToService: ScrollToService, private _qzProgressSrv: QuizProgressService) {}
@@ -33,6 +34,8 @@ export class MultipleChoiceComponent implements OnInit {
   navTo($ev, navId) {
 
     // console.log( 'choice >>> ',this.headerSectionFormGroup.get(this.fieldName).value);
+    
+    this.istest = false;
 
     if($ev.target.checked) {
     
@@ -59,6 +62,24 @@ export class MultipleChoiceComponent implements OnInit {
    
       this._scrollToService.scrollTo(config);
     }
+  }
+
+  
+  testfn(navId) {
+    
+    if(!this.headerSectionFormGroup.controls[this.fieldName].valid) {
+      this.istest = true;
+    } else {
+      this.istest = false;
+        if(navId) {
+
+        const config: ScrollToConfigOptions = {
+          target: navId
+        };
+    
+        this._scrollToService.scrollTo(config);
+      }
+    } 
   }
 
 }

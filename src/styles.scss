@@ -12,3 +12,24 @@ body {
     font-family: 'Roboto', sans-serif;
 	font-family: 'Open Sans', sans-serif;
 }
+
+.text-danger {
+    background: #ff0000;
+    color: #fff;
+    font-size: .8em;
+    padding: .5em 1em;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    margin-left: 7em;
+}
+
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: -5px;
+    border-bottom: 5px solid red;
+}

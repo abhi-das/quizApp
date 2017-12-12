@@ -91,7 +91,7 @@
         "headline": "Wie wichtig ist Dir die Absicherung gegen Mietsachschäden?",
         "description": null,
         "required": true,
-        "nextEnable": false,
+        "nextEnable": true,
         "multiple": "false",
         "choices": [
           {

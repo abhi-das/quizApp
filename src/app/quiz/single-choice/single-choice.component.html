@@ -22,10 +22,14 @@
 	            <label>{{choice.label}}</label>
 	        </div>
 	    </div>
+		
 	</div>
 </div>
 
+<p *ngIf="istest" class="text-danger"><span class="arrow-up"></span> select one of the option provided.</p>
+
+<!--*ngIf="qz.nextEnable && !isLastQ" [ngx-scroll-to]="navigateNext">-->
 <p class="schoice__btn-next" 
-	*ngIf="qz.nextEnable && !isLastQ" [ngx-scroll-to]="navigateNext">
+	*ngIf="qz.nextEnable && !isLastQ" (click)="testfn(navigateNext)">
 	<span class="schoice__btn-next-text">OK   <i class="fa fa-check"></i></span>
 </p>
