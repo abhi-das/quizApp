@@ -49,4 +49,8 @@ $ alias ngh=" C:/Users/s7527620/AppData/Roaming/npm/node_modules/angular-cli-ghp
   }
 }
 
+## Progress bar
+https://embed.plnkr.co/rx4RJUFjHqGYMA3jRxDL/
+
+
 
