@@ -19,6 +19,7 @@ import { FeedbackDataComponent } from './quiz/feedback-data/feedback-data.compon
 import { HttpModule } from '@angular/http';
 import { QuizSevice } from './services/quiz.service';
 import { QuizProgressService } from './services/quiz.progress.service';
+import { ProgressBarComponent } from './quiz/progress-bar/progress-bar.component';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { QuizProgressService } from './services/quiz.progress.service';
     MultipleChoiceComponent,
     SingleChoiceComponent,
     UserInputComponent,
-    FeedbackDataComponent
+    FeedbackDataComponent,
+    ProgressBarComponent
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
   providers: [ WindowRef, QuizSevice, QuizProgressService ],

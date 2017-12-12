@@ -18,6 +18,7 @@ export class QuizComponent implements OnInit {
   formData: object;
   qzData: any;
   count: number;
+  totalCount: number;
 
   constructor(private _scrollToService: ScrollToService, private _qzSer: QuizSevice, private _qzProgressSrv: QuizProgressService) { }
 
@@ -26,6 +27,7 @@ export class QuizComponent implements OnInit {
     this.qzData = this._qzSer.getQuiz().subscribe((res: Response) => {
       // console.log('right here > ', res['questionnaire']['questions']);
       this.questions = res['questionnaire']['questions'];
+      this.totalCount = this.questions.length;
     });
 
     // Form Controls
