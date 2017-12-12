@@ -30,10 +30,7 @@ export class SingleChoiceComponent implements OnInit {
     this.newFormControl = new FormControl(this.selectedValue, isRequired);
     this.headerSectionFormGroup.addControl(this.fieldName, this.newFormControl);
     this.selectedValue = '';
-    // console.log("valid..." , this.headerSectionFormGroup.controls[this.fieldName].valid);
-    // console.log("untouched..." , this.headerSectionFormGroup.controls[this.fieldName].untouched);
-    // console.log("dirty..." , this.headerSectionFormGroup.controls[this.fieldName].dirty);
-    // console.log("touched..." , this.headerSectionFormGroup.controls[this.fieldName].touched);
+
   }
 
   navTo($ev,navId) {
@@ -74,15 +71,6 @@ export class SingleChoiceComponent implements OnInit {
       }
     } 
 
-    // console.log("valid..." , this.headerSectionFormGroup.controls[this.fieldName].valid);
-    // console.log("untouched..." , this.headerSectionFormGroup.controls[this.fieldName].untouched);
-    // console.log("dirty..." , this.headerSectionFormGroup.controls[this.fieldName].dirty);
-    // console.log("touched..." , this.headerSectionFormGroup.controls[this.fieldName].touched);
-    // if(this.isChecked) {
-
-    // } else {
-
-    // }
   }
 
 }

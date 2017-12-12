@@ -11,7 +11,10 @@
 			value="" (change)="navTo($event, '')" (keydown.enter)="navTo($event, navigateNext)" />
 	</div>
 </div>
-<p class="user-text__btn-next" [ngx-scroll-to]="navigateNext"> 
+
+<p *ngIf="istest" class="text-danger"><span class="arrow-up"></span>It is mandotary field.</p>
+
+<p class="user-text__btn-next" (click)="testfn(navigateNext)"> 
 	<span class="user-text__btn-next-text">OK   <i class="fa fa-check"></i></span>
 	<span> press <strong>Enter</strong></span>
 </p>

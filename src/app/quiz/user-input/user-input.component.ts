@@ -19,10 +19,13 @@ export class UserInputComponent implements OnInit {
 	@Input() fieldName: string;
 	@Input() qz: any;
 
+	istest: boolean;
+
 	constructor(private _scrollToService: ScrollToService, private _qzProgressSrv: QuizProgressService) {}
 
 	ngOnInit() {
 
+		this.istest = false;
 		this.userFieldVal = '';
 		var isRequired = (this.qz.required ? Validators.required : null);
 
@@ -43,16 +46,37 @@ export class UserInputComponent implements OnInit {
 			if(navId) {
 
 				const config: ScrollToConfigOptions = {
-				target: navId
-			};
-		
-			this._scrollToService.scrollTo(config);
+					target: navId
+				};
+			
+				this._scrollToService.scrollTo(config);
 			}
+
+			this.istest = false;
+		
 		} else {
+			this.istest = true;
 			this._qzProgressSrv.updateQuizCount('dec');
 		}
-
-	    
+    
   	}
+
+	testfn(navId) {
+    
+		if(!this.headerSectionFormGroup.controls[this.fieldName].valid) {
+			this.istest = true;
+		} else {
+			this.istest = false;
+				if(navId) {
+
+				const config: ScrollToConfigOptions = {
+				target: navId
+				};
+			
+				this._scrollToService.scrollTo(config);
+			}
+		} 
+
+	}
 
 }
