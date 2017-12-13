@@ -38,7 +38,7 @@
 	    </li>
 	</ul>
 	<div class="form-group quiz-list__btn-container">
-		<button class="quiz-list__btn-submit" 
+		<button class="quiz-list__btn-submit" [attr.aria-describedby]="'submit-form'"
 			name="submit" type="submit" [disabled]="!form.valid">
 			<span class="quiz-list__btn-submit-text">Submit</span>
 			<span> show <strong>Form Data</strong></span>

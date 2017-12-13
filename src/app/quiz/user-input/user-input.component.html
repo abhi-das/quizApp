@@ -14,7 +14,7 @@
 
 <p *ngIf="istest" class="text-danger"><span class="arrow-up"></span>It is mandotary field.</p>
 
-<p class="user-text__btn-next" (click)="testfn(navigateNext)"> 
+<p class="user-text__btn-next" (click)="testfn(navigateNext)" [attr.aria-label]="fieldName+('-ok-button')"> 
 	<span class="user-text__btn-next-text">OK   <i class="fa fa-check"></i></span>
 	<span> press <strong>Enter</strong></span>
 </p>

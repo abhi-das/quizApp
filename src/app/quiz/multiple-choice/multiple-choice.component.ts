@@ -33,6 +33,7 @@ export class MultipleChoiceComponent implements OnInit {
 
   navTo($ev, navId) {
 
+    console.log(this);
     // console.log( 'choice >>> ',this.headerSectionFormGroup.get(this.fieldName).value);
     
     this.istest = false;
@@ -64,21 +65,18 @@ export class MultipleChoiceComponent implements OnInit {
     }
   }
 
-  
   testfn(navId) {
     
     if(!this.headerSectionFormGroup.controls[this.fieldName].valid) {
       this.istest = true;
     } else {
+      
       this.istest = false;
-        if(navId) {
-
-        const config: ScrollToConfigOptions = {
-          target: navId
-        };
-    
-        this._scrollToService.scrollTo(config);
-      }
+      const config: ScrollToConfigOptions = {
+        target: navId
+      };
+  
+      this._scrollToService.scrollTo(config);
     } 
   }
 

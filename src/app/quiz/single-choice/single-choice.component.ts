@@ -35,6 +35,7 @@ export class SingleChoiceComponent implements OnInit {
 
   navTo($ev,navId) {
 
+    console.log(this);
     this.istest = false;
     
     if(this.selectedValue ==='') {
@@ -60,15 +61,13 @@ export class SingleChoiceComponent implements OnInit {
     if(!this.headerSectionFormGroup.controls[this.fieldName].valid) {
       this.istest = true;
     } else {
-      this.istest = false;
-        if(navId) {
 
-        const config: ScrollToConfigOptions = {
-          target: navId
-        };
-    
-        this._scrollToService.scrollTo(config);
-      }
+      this.istest = false;
+      const config: ScrollToConfigOptions = {
+        target: navId
+      };
+  
+      this._scrollToService.scrollTo(config);
     } 
 
   }

@@ -27,7 +27,7 @@
 	</div>
 </div>
 <p *ngIf="istest" class="text-danger"><span class="arrow-up"></span> select one of the option provided.</p>
-<p class="mchoice__btn-next" 
+<p class="mchoice__btn-next" [attr.aria-label]="fieldName+('-ok-button')"
 	*ngIf="qz.nextEnable && !isLastQ" (click)="testfn(navigateNext)">
 	<span class="mchoice__btn-next-text">OK   <i class="fa fa-check"></i></span>
 </p>

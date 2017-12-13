@@ -35,3 +35,8 @@ body {
     top: -5px;
     border-bottom: 5px solid red;
 }
+
+.visually-hidden {
+    visibility: hidden;
+    height: 0;
+}
