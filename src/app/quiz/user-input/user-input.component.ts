@@ -18,7 +18,10 @@ export class UserInputComponent implements OnInit {
 	@Input() headerSectionFormGroup: FormGroup;
 	@Input() fieldName: string;
 	@Input() qz: any;
-
+	@Input() index;
+	@Input() isLastQ;
+	@Input() navigateNext;
+	
 	istest: boolean;
 
 	constructor(private _scrollToService: ScrollToService, private _qzProgressSrv: QuizProgressService) {}

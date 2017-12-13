@@ -8,6 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProgressBarComponent implements OnInit {
 
+  @Input() count;
+  @Input() totalCount;
+
   constructor() { }
 
   ngOnInit() {

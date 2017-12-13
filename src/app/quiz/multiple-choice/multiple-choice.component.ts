@@ -17,6 +17,9 @@ export class MultipleChoiceComponent implements OnInit {
   @Input() headerSectionFormGroup: FormGroup;
   @Input() fieldName: string;
   @Input() qz: any;
+  @Input() index;
+  @Input() isLastQ;
+  @Input() navigateNext;
   
   public istest: boolean;
   public checkedCount: number;
