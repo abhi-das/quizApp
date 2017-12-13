@@ -27,6 +27,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
+## Ngx-bootstrap component
+https://valor-software.com/ngx-bootstrap/
+
 ## Reference 
 https://loiane.com/2017/08/how-to-add-bootstrap-to-an-angular-cli-project/
 https://github.com/loiane/angular-bootstrap-example
@@ -53,6 +56,8 @@ $ alias ngh=" C:/Users/s7527620/AppData/Roaming/npm/node_modules/angular-cli-ghp
 https://embed.plnkr.co/rx4RJUFjHqGYMA3jRxDL/
 
 
-
 ## Scroll and focus
 https://jsfiddle.net/cse_tushar/Dxtyu/141/
+
+## Prime UI Lib for angular 2+
+https://www.primefaces.org/primeng/#/
