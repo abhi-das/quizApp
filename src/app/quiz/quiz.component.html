@@ -46,7 +46,9 @@
 	</div>
 </form>
 
-<progress-bar [count]="count" [totalCount]="totalCount"></progress-bar>
-<!-- <pre>{{your_form or control_name | json }}</pre> -->
-<!--*ngIf="userForm.get('gender').invalid"> -->
-<feedback-data [formDataValues]="formData"></feedback-data>
+<div class="form-footer">
+	<div class="form-footer__container">
+		<progress-bar [count]="count" [totalCount]="totalCount"></progress-bar>
+		<feedback-data *ngIf="formData" [formDataValues]="formData"></feedback-data>
+	</div>
+</div>

@@ -42,3 +42,15 @@ form {
         }
     }
 }
+
+.form-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(210, 174,243, .5);
+    width: 100%;
+    &__container {
+        width: 80%;
+        padding: 1em;
+    }
+}
