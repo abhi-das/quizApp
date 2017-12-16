@@ -25,11 +25,13 @@ export class QuizComponent implements OnInit {
 
   ngOnInit() {
 
+    this.pageLoader = true;
 
     this.qzData = this._qzSer.getQuiz().subscribe((res: Response) => {
       // console.log('right here > ', res['questionnaire']['questions']);
       this.questions = res['questionnaire']['questions'];
       this.totalCount = this.questions.length;
+      this.pageLoader = false;
     });
 
     // Form Controls

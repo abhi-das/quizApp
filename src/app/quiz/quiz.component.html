@@ -1,4 +1,5 @@
 <form
+	*ngIf="qzData"
 	[formGroup] = 'form'
 	(ngSubmit)="onFeedbackSubmit(form.value, '#formDataContainer')"
 	>
@@ -37,7 +38,7 @@
 	        
 	    </li>
 	</ul>
-	<div class="form-group quiz-list__btn-container">
+	<div class="form-group quiz-list__btn-container" *ngIf="!pageLoader">
 		<button class="quiz-list__btn-submit" [attr.aria-describedby]="'submit-form'"
 			name="submit" type="submit" [disabled]="!form.valid">
 			<span class="quiz-list__btn-submit-text">Submit</span>
@@ -46,11 +47,11 @@
 	</div>
 </form>
 
-<div class="form-footer">
+<div class="form-footer" *ngIf="qzData">
 	<div class="form-footer__container">
 		<progress-bar [count]="count" [totalCount]="totalCount"></progress-bar>
 		<feedback-data *ngIf="formData" [formDataValues]="formData"></feedback-data>
 	</div>
 </div>
 
-<div class="loader" *ngIf="!qzData"></div>
+<div class="loader" *ngIf="pageLoader"></div>
