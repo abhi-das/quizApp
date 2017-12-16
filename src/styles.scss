@@ -40,3 +40,42 @@ body {
     visibility: hidden;
     height: 0;
 }
+
+.loader {
+    border: 1em solid #f6f6f6;
+    border-top: 1em solid #3498db;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    animation: spin 2s linear infinite;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    margin-top: -3em;
+    margin-left: -3em;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+    100% {transform: rotate(360deg) }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

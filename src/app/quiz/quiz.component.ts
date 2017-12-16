@@ -19,15 +19,19 @@ export class QuizComponent implements OnInit {
   qzData: any;
   count: number;
   totalCount: number;
+  pageLoader: boolean;
 
   constructor(private _scrollToService: ScrollToService, private _qzSer: QuizSevice, private _qzProgressSrv: QuizProgressService) { }
 
   ngOnInit() {
 
+    this.pageLoader = true;
+
     this.qzData = this._qzSer.getQuiz().subscribe((res: Response) => {
       // console.log('right here > ', res['questionnaire']['questions']);
       this.questions = res['questionnaire']['questions'];
       this.totalCount = this.questions.length;
+      this.pageLoader = false;
     });
 
     // Form Controls
