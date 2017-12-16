@@ -61,3 +61,7 @@ https://jsfiddle.net/cse_tushar/Dxtyu/141/
 
 ## Prime UI Lib for angular 2+
 https://www.primefaces.org/primeng/#/
+
+## Page deployment
+ng build --prod --base-href https://abhi-das.github.io/pagedeploy/
+ngh
