@@ -4,13 +4,12 @@
 	right: 0;
 	z-index: 2;
 	&__container {
-		padding: .5em; 
 		position: absolute;
 		top: 2em;
-		right: 0;
+		right: -15em;
 		transition: all .2s ease-in-out;
 		&.isPanelOpen {
-			right: -15.5em;
+			right: 0;
 		}
 	}
 	&__header-icon {
