@@ -1,3 +1,5 @@
+@import '../../base-style/variables';
+
 .slide-panel {
 	position: fixed;
 	top: 2em;
@@ -16,12 +18,12 @@
 		cursor: pointer;
 		padding: .8em;
 		color: #4e63b1;
-		background: rgba(215,215,215,.7);
+		background: $blue-color-4x;
 	}
 	&__content {
 		width: 15em;
 		min-height: 20em;
-		background: rgba(215,215,215,.7);
+		background: $blue-color-4x;
 		margin-left: 3em;
 	}
 

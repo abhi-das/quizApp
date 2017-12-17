@@ -21,6 +21,7 @@ import { QuizSevice } from './services/quiz.service';
 import { QuizProgressService } from './services/quiz.progress.service';
 import { ProgressBarComponent } from './quiz/progress-bar/progress-bar.component';
 import { ConfigSlidePanel } from './directives/config-slide-panel.directive';
+import { SlidePanelContainer } from './directives/slide-panel-container.directive';
 import { SlidePanelComponent } from './common/slide-panel/slide-panel.component';
 
 @NgModule({
@@ -42,6 +43,7 @@ import { SlidePanelComponent } from './common/slide-panel/slide-panel.component'
     FeedbackDataComponent,
     ProgressBarComponent,
     ConfigSlidePanel,
+    SlidePanelContainer,
     SlidePanelComponent
   ],
   exports: [BsDropdownModule, TooltipModule, ModalModule],
